@@ -26,7 +26,7 @@ Valentin travaille principalement sur UserShaker : le site met en avant les miss
 
 ## Brand Commitments
 - Nom : Valentin Hassenforder. Avatar Memoji (fourni par Valentin).
-- Les clients des projets présentés peuvent être nommés : ces projets ont été communiqués publiquement.
+- Clients anonymes (« constructeur automobile », « équipementier automobile ») tant que les fiches projets sont en création, même si les projets ont été communiqués publiquement.
 
 ## Evidence on Hand
 - UserShaker : rendu 3D du kit (`public/images/usershaker-kit.jpg`) ; incubé à EuraTechnologies ; lauréat Techinnov.

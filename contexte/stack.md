@@ -6,7 +6,7 @@
 | React 19 | Livré avec Next 16. |
 | TypeScript strict | Le contenu FR/EN est typé : une traduction manquante casse le build. |
 | Tailwind CSS 4 | Tokens déclarés une fois dans `globals.css` (`@theme`), pas de CSS éparpillé. |
-| `next/font/google` | Schibsted Grotesk + JetBrains Mono auto-hébergées : pas de requête vers Google, pas de layout shift. |
+| `next/font/local` | Schibsted Grotesk + JetBrains Mono (variables, licence OFL, fichiers Fontsource) versionnées dans `src/app/fonts/` : pas d'appel réseau au build, pas de requête vers Google, pas de layout shift. |
 | `next/image` | Formats modernes et tailles responsives pour les visuels de projets. |
 | i18n maison (`src/content/*.ts` + segment `[lang]`) | Le guide i18n de Next suffit pour 2 langues ; pas de lib tant que ce n'est pas nécessaire. |
 | Vercel | Déploiement et previews de PR, comme UserShaker. |

@@ -4,13 +4,15 @@
 
 - ✅ Repo branché sur Vercel (https://valentinhassenforder.vercel.app) — reste le domaine `valentinhassenforder.fr`
 - ✅ PR `feat/accueil` mergée (PR #1)
-- Merger la PR `feat/detail-projet` après test de la modale sur la preview Vercel
-- Clients anonymes pendant la création des fiches ; décider plus tard si on les nomme (projets publics)
-- Rédiger les fiches « en construction » : cockpit, éclairage, retail, triathlon (+ étude de cas complète), landing pages PME
+- Merger la PR `feat/detail-projet` après test de la modale et de la section Parcours (desktop + mobile) sur la preview Vercel
+- Préciser l'année de début du freelance (ligne Rév. 06 du parcours, affichée « Auj. »)
+- Clients anonymes pendant la création des fiches ; décider plus tard si on les nomme (projets publics) — UserShaker : clients nommés (Renault, Mercedes, Rubika), décidé le 14/10/2026
+- Rédiger les fiches « en construction » : cockpit, éclairage, démonstrateur auto, triathlon (+ étude de cas complète), landing pages PME
 - Résultat de l'étude de cas UserShaker (section 04) + captures de l'app V2
 - Memoji haute résolution (≥ 1000 px)
+- Section Parcours : fournir le CV en PDF pour ajouter le bouton « Télécharger le CV » de la maquette
 - Récupérer les vrais visuels : captures UserShaker V2, app triathlon, landing pages PME
-- Préciser le contexte des projets epicnpoc « Éclairage extérieur » et « Retail interactif »
+- Préciser le contexte du projet epicnpoc « Éclairage extérieur » (« Démonstrateur auto » = simulateur de conduite epicnpoc pour le CES 2024, logiciel BOWL)
 
 ---
 
@@ -33,3 +35,10 @@
 - Vérification : lint ✅, build ✅ (17 pages statiques), `impeccable detect` : 0 alerte, parcours modale testé (ouverture, suivant, Échap → `/fr`), captures desktop + mobile sans débordement.
 - Branche : `feat/detail-projet` → PR vers `main`
 - Blocages : aucun
+
+## 2026-10-14 — [Valentin] Section Parcours + corrections des projets
+- Fait : section « Parcours » sur l'accueil (04 À propos, 05 Historique des révisions, 06 Formation) d'après la maquette, lien « Parcours » dans le menu, Formats → 07 et Contact → 08 ; clients de l'étude de cas UserShaker nommés (Renault, Mercedes, Rubika) ; projet « Retail interactif » remplacé par « Démonstrateur auto » (simulateur de conduite epicnpoc, CES 2024, logiciel BOWL ; slug `demonstrateur-auto`) ; ligne freelance ajoutée en tête des postes.
+- Décisions + raison : bouton « Télécharger le CV » de la maquette pas intégré tant qu'il n'y a pas de PDF (pas de lien mort) ; « OpenAI API » remplacé par « IA générative » (terme plus général) ; saut de ligne dans la bio via `\n` + `whitespace-pre-line`.
+- Vérification : lint ✅, build ✅ ; captures non faites (serveur local non accessible) → à regarder sur la preview Vercel.
+- Branche : `feat/detail-projet` → PR vers `main`
+- Blocages : année de début du freelance à préciser ; CV PDF à fournir.

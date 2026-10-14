@@ -16,6 +16,7 @@ export const content: Content = {
     docRef: "Réf. VH-2026 · Rév. 10.26",
     links: [
       { href: "#index", label: "Index" },
+      { href: "#parcours", label: "Parcours" },
       { href: "#formats", label: "Formats" },
       { href: "#contact", label: "Contact" },
     ],
@@ -93,16 +94,17 @@ export const content: Content = {
       role: "UI Designer",
     },
     {
-      slug: "retail-interactif",
+      slug: "demonstrateur-auto",
       number: "04",
-      title: "Retail interactif",
+      title: "Démonstrateur auto",
       client: "epicnpoc",
-      context: "CES · VivaTech",
-      year: "2022–24",
+      context: "CES 2024",
+      year: "2024",
       kind: "sheet",
       status: "soon",
-      summary: "Des parcours de démonstration produit conçus pour le CES (Las Vegas) et VivaTech (Paris).",
-      role: "UI Designer",
+      summary:
+        "Un simulateur de conduite interactif pour montrer les capacités du logiciel BOWL d'epicnpoc au CES 2024. J'ai pensé la démo, du parcours de l'expérience au design des interfaces.",
+      role: "UX/UI Designer",
     },
     {
       slug: "coaching-triathlon",
@@ -151,7 +153,7 @@ export const content: Content = {
       lead: "Une plateforme pour stocker, structurer et partager les données d'usage de produits phygitaux. Je l'ai conçue et codée, de la V1 no-code à la V2 en Next.js.",
       specs: [
         { label: "Rôle", value: "Co-fondateur, Product Engineer" },
-        { label: "Clients", value: "Constructeurs et équipementiers automobiles" },
+        { label: "Clients", value: "Renault, Mercedes, Rubika" },
         { label: "Contexte", value: "Incubé à EuraTechnologies, lauréat Techinnov" },
         { label: "Stack", value: "Figma · Next.js · TypeScript · Prisma · Supabase · Vercel · OpenAI", mono: true },
       ],
@@ -185,8 +187,37 @@ export const content: Content = {
     },
   ],
   caseNav: { backToIndex: "Index des projets", nextProject: "Projet suivant", caseLabel: "Étude de cas" },
+  about: {
+    label: "04 / À propos",
+    statement: "Designer de formation, devenu Product Engineer.",
+    body: "Six ans d'UI/UX, d'abord en agence et en alternance, puis dans l'automobile chez epicnpoc, où j'ai dessiné des interfaces pour des constructeurs et des démos présentées au CES et à VivaTech.\nAujourd'hui co-fondateur de UserShaker, je conçois et je code le produit de bout en bout.",
+    toolsLabel: "Outils du quotidien",
+    tools: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "IA générative", "Figma", "Bubble.io"],
+    offScreenLabel: "Hors écran",
+    offScreen: "Triathlon, nautisme, cinéma.",
+    revisions: {
+      label: "05 / Historique des révisions",
+      columns: { rev: "Rév.", period: "Période", role: "Poste", org: "Organisation" },
+      items: [
+        { rev: "Rév. 06", period: "Auj.", role: "Product Engineer UX/UI, freelance", org: "Indépendant" },
+        { rev: "Rév. 05", period: "2024 — auj.", role: "Co-fondateur & Product Engineer", org: "UserShaker" },
+        { rev: "Rév. 04", period: "2022 — 2024", role: "UI Designer, alternance puis CDI", org: "epicnpoc" },
+        { rev: "Rév. 03", period: "2021 — 2022", role: "Web Designer, alternance", org: "Paris Beauté" },
+        { rev: "Rév. 02", period: "2019 — 2021", role: "Assistant Web Designer, alternance", org: "Cyra-Lydo" },
+        { rev: "Rév. 01", period: "2019", role: "Web Designer, stage", org: "Duc Oger" },
+      ],
+    },
+    education: {
+      label: "06 / Formation",
+      items: [
+        { period: "2021 — 2023", title: "Mastère Stratégie & communication digitale", school: "ECV Digital" },
+        { period: "2018 — 2021", title: "Bachelor Webdesign", school: "ICAN" },
+        { period: "2017 — 2018", title: "Design & communication visuelle", school: "intuit.lab" },
+      ],
+    },
+  },
   formats: {
-    label: "04 / Formats",
+    label: "07 / Formats",
     title: "Livré en quelques jours, à prix fixe.",
     note: "Projets plus longs (MVP, refonte UX/UI, sortie du no-code, IA) : accompagnement à temps partiel.",
     items: [
@@ -197,7 +228,7 @@ export const content: Content = {
     ],
   },
   contact: {
-    label: "05 / Contact",
+    label: "08 / Contact",
     title: "Un projet ?",
     titleAccent: "Écrivez-moi.",
     email,

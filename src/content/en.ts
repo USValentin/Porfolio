@@ -16,6 +16,7 @@ export const content: Content = {
     docRef: "Ref. VH-2026 · Rev. 10.26",
     links: [
       { href: "#index", label: "Index" },
+      { href: "#parcours", label: "Background" },
       { href: "#formats", label: "Formats" },
       { href: "#contact", label: "Contact" },
     ],
@@ -92,16 +93,17 @@ export const content: Content = {
       role: "UI Designer",
     },
     {
-      slug: "retail-interactif",
+      slug: "demonstrateur-auto",
       number: "04",
-      title: "Interactive retail",
+      title: "Automotive demonstrator",
       client: "epicnpoc",
-      context: "CES · VivaTech",
-      year: "2022–24",
+      context: "CES 2024",
+      year: "2024",
       kind: "sheet",
       status: "soon",
-      summary: "Product demo journeys designed for CES (Las Vegas) and VivaTech (Paris).",
-      role: "UI Designer",
+      summary:
+        "An interactive driving simulator showcasing what epicnpoc's BOWL software can do, at CES 2024. I designed the demo, from the journey through the experience to the interfaces.",
+      role: "UX/UI Designer",
     },
     {
       slug: "coaching-triathlon",
@@ -150,7 +152,7 @@ export const content: Content = {
       lead: "A platform to store, structure and share usage data for phygital products. I designed and built it, from the no-code V1 to the Next.js V2.",
       specs: [
         { label: "Role", value: "Co-founder, Product Engineer" },
-        { label: "Clients", value: "Car makers and automotive suppliers" },
+        { label: "Clients", value: "Renault, Mercedes, Rubika" },
         { label: "Context", value: "Incubated at EuraTechnologies, Techinnov award winner" },
         { label: "Stack", value: "Figma · Next.js · TypeScript · Prisma · Supabase · Vercel · OpenAI", mono: true },
       ],
@@ -184,8 +186,37 @@ export const content: Content = {
     },
   ],
   caseNav: { backToIndex: "Project index", nextProject: "Next project", caseLabel: "Case study" },
+  about: {
+    label: "04 / About",
+    statement: "Trained as a designer, now a Product Engineer.",
+    body: "Six years of UI/UX, first in agencies and work-study programmes, then in the automotive industry at epicnpoc, where I designed interfaces for car makers and demos shown at CES and VivaTech.\nToday, as co-founder of UserShaker, I design and code the product end to end.",
+    toolsLabel: "Everyday tools",
+    tools: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "Generative AI", "Figma", "Bubble.io"],
+    offScreenLabel: "Off screen",
+    offScreen: "Triathlon, sailing, cinema.",
+    revisions: {
+      label: "05 / Revision history",
+      columns: { rev: "Rev.", period: "Period", role: "Position", org: "Organisation" },
+      items: [
+        { rev: "Rev. 06", period: "Now", role: "Product Engineer UX/UI, freelance", org: "Self-employed" },
+        { rev: "Rev. 05", period: "2024 — now", role: "Co-founder & Product Engineer", org: "UserShaker" },
+        { rev: "Rev. 04", period: "2022 — 2024", role: "UI Designer, work-study then full-time", org: "epicnpoc" },
+        { rev: "Rev. 03", period: "2021 — 2022", role: "Web Designer, work-study", org: "Paris Beauté" },
+        { rev: "Rev. 02", period: "2019 — 2021", role: "Assistant Web Designer, work-study", org: "Cyra-Lydo" },
+        { rev: "Rev. 01", period: "2019", role: "Web Designer, internship", org: "Duc Oger" },
+      ],
+    },
+    education: {
+      label: "06 / Education",
+      items: [
+        { period: "2021 — 2023", title: "Master's in Digital Strategy & Communication", school: "ECV Digital" },
+        { period: "2018 — 2021", title: "Bachelor's in Web Design", school: "ICAN" },
+        { period: "2017 — 2018", title: "Design & Visual Communication", school: "intuit.lab" },
+      ],
+    },
+  },
   formats: {
-    label: "04 / Formats",
+    label: "07 / Formats",
     title: "Delivered in a few days, at a fixed price.",
     note: "Longer projects (MVP, UX/UI redesign, moving off no-code, AI): part-time support.",
     items: [
@@ -196,7 +227,7 @@ export const content: Content = {
     ],
   },
   contact: {
-    label: "05 / Contact",
+    label: "08 / Contact",
     title: "Got a project?",
     titleAccent: "Write to me.",
     email,

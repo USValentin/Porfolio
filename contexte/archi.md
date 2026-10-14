@@ -19,7 +19,7 @@
 - `src/lib/projects.ts` : `projectHref`, `findProject`, `adjacentSheets`.
 
 ## Composants
-- `src/components/home/*` : une section de l'accueil par fichier (Header, Hero, ProjectIndex, Formats, Contact).
+- `src/components/home/*` : une section de l'accueil par fichier (Header, Hero, ProjectIndex, About — ancre `#parcours`, Formats, Contact).
 - `src/components/project/*` : `Modal` (client, `<dialog>` natif), `ProjectSheet`, `ConstructionNotice`.
 - `src/components/ui/*` : icônes SVG (`Icons`) et `StatusBadge`. Jamais de glyphe Unicode ou d'emoji comme icône.
 - Server Components par défaut ; `"use client"` seulement là où il y a de l'interactivité.

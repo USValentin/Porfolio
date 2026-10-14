@@ -87,6 +87,25 @@ export type Content = {
   };
   caseStudies: CaseStudy[];
   caseNav: { backToIndex: string; nextProject: string; caseLabel: string };
+  about: {
+    label: string;
+    statement: string;
+    body: string;
+    toolsLabel: string;
+    tools: string[];
+    offScreenLabel: string;
+    offScreen: string;
+    /** Career, newest first, presented as a datasheet revision history. */
+    revisions: {
+      label: string;
+      columns: { rev: string; period: string; role: string; org: string };
+      items: { rev: string; period: string; role: string; org: string }[];
+    };
+    education: {
+      label: string;
+      items: { period: string; title: string; school: string }[];
+    };
+  };
   formats: {
     label: string;
     title: string;

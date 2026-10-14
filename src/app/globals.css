@@ -33,8 +33,45 @@ body {
   outline-offset: 3px;
 }
 
+/* Browser surfaces themed from the palette. */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ground);
+}
+html {
+  caret-color: var(--color-accent);
+  scrollbar-color: var(--color-muted) var(--color-ground);
+}
+
+/* Project modal — native <dialog>. Entry only: closing is a route change. */
+html:has(.project-dialog[open]) {
+  overflow: hidden;
+}
+.project-dialog[open] {
+  animation: dialog-in 220ms var(--ease-out-quint);
+}
+.project-dialog::backdrop {
+  background: rgb(18 19 22 / 0.62);
+  animation: backdrop-in 220ms var(--ease-out-quint);
+}
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .project-dialog[open],
+  .project-dialog::backdrop {
+    animation: none;
   }
 }

@@ -3,8 +3,10 @@ import { getContent, hasLocale } from "@/lib/i18n";
 import { Header } from "@/components/home/Header";
 import { Hero } from "@/components/home/Hero";
 import { ProjectIndex } from "@/components/home/ProjectIndex";
+import { About } from "@/components/home/About";
 import { Formats } from "@/components/home/Formats";
 import { Contact } from "@/components/home/Contact";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
@@ -16,10 +18,12 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <Header nav={content.nav} lang={lang} />
       <main id="top">
         <Hero hero={content.hero} />
-        <ProjectIndex index={content.index} />
+        <ProjectIndex content={content} lang={lang} />
+        <About about={content.about} />
         <Formats formats={content.formats} />
-        <Contact contact={content.contact} footer={content.footer} />
+        <Contact contact={content.contact} />
       </main>
+      <SiteFooter footer={content.footer} />
     </>
   );
 }

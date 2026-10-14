@@ -11,4 +11,6 @@
 | i18n maison (`src/content/*.ts` + segment `[lang]`) | Le guide i18n de Next suffit pour 2 langues ; pas de lib tant que ce n'est pas nécessaire. |
 | Vercel | Déploiement et previews de PR, comme UserShaker. |
 
+| Skills Claude `impeccable` + `web-animation-design` | Versionnés dans `.claude/skills/` (licences Apache 2.0 et MIT incluses). `PRODUCT.md` à la racine est la fiche produit lue par impeccable. Détecteur : `.claude/skills/impeccable/scripts/impeccable detect --json src`. |
+
 Pas de base de données, pas d'auth, pas de CMS : le contenu change rarement et vit dans le repo.

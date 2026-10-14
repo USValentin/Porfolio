@@ -102,8 +102,10 @@ tasks/lessons.md         # Leçons apprises, auto-chargé
 - **Simplicité d'abord**, **root cause** plutôt que contournement, **impact minimal**.
 
 ### 3.8 Design et animations
-- Skills de référence : **impeccable** (qualité d'interface) et **web-animation-design** (easing,
-  durées). Animer seulement `transform` et `opacity`, `ease-out` pour les entrées, < 300 ms en UI,
+- Skills installés dans `.claude/skills/` : **impeccable** (qualité d'interface ; lancer
+  `.claude/skills/impeccable/scripts/impeccable context` en début de travail UI, puis
+  `impeccable detect --json <fichiers>` une fois l'UI finie) et **web-animation-design** (easing,
+  durées). `PRODUCT.md` (racine) est la fiche produit d'impeccable. Animer seulement `transform` et `opacity`, `ease-out` pour les entrées, < 300 ms en UI,
   `prefers-reduced-motion` partout.
 
 ---

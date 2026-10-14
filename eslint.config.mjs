@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Third-party Claude skills (impeccable, web-animation-design) ship their own bundled JS.
+    ".claude/**",
   ]),
 ]);
 

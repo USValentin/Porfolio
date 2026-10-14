@@ -34,13 +34,16 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   };
 }
 
-export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
+export default async function RootLayout({ children, modal, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
 
   return (
     <html lang={lang} className={`${schibsted.variable} ${jetbrains.variable} antialiased`}>
-      <body className="min-h-screen bg-ground font-sans text-ink">{children}</body>
+      <body className="min-h-screen bg-ground font-sans text-ink">
+        {children}
+        {modal}
+      </body>
     </html>
   );
 }

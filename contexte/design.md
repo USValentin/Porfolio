@@ -31,6 +31,16 @@ Une seule couleur d'accent (vert sapin). Pas de dégradé, pas d'ombre décorati
 - Survol seulement sur `(hover: hover) and (pointer: fine)`.
 - `prefers-reduced-motion: reduce` → aucune transition.
 
+## Statut « en construction »
+- Tout projet `status: "soon"` porte un badge `En construction` (point vert qui pulse, figé en
+  reduced motion) dans l'index, et un bloc en pointillés `Fiche en construction` + CTA mail dans sa fiche.
+- Les visuels manquants d'une étude de cas sont des cadres en pointillés libellés, jamais des images inventées.
+
+## Modale
+- `<dialog>` natif, 760 px max, fond `ground`, backdrop `ink` à 62 %.
+- Entrée : `opacity` + `translateY(8px) scale(0.98)` → 220 ms `ease-out-quint`. Pas d'animation de sortie
+  (la fermeture est un retour d'historique). Aucune animation en reduced motion.
+
 ## Responsive
 - Mobile d'abord. Le tableau d'index devient une liste empilée sous 768 px.
 - Gouttière 16 px sur mobile, 32 px au-delà ; conteneur max 1376 px.

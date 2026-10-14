@@ -2,9 +2,13 @@
 
 ## À faire ensuite — agenda
 
-- Brancher le repo sur Vercel et le domaine `valentinhassenforder.fr`
-- Merger la PR `feat/accueil` après relecture sur la preview Vercel
-- Coder le détail projet : modale (petits projets) + page complète (UserShaker, triathlon)
+- ✅ Repo branché sur Vercel (https://valentinhassenforder.vercel.app) — reste le domaine `valentinhassenforder.fr`
+- ✅ PR `feat/accueil` mergée (PR #1)
+- Merger la PR `feat/detail-projet` après test de la modale sur la preview Vercel
+- Confirmer les clients nommés : Renault (cockpit), Forvia (éclairage extérieur)
+- Rédiger les fiches « en construction » : cockpit, éclairage, retail, triathlon (+ étude de cas complète), landing pages PME
+- Résultat de l'étude de cas UserShaker (section 04) + captures de l'app V2
+- Memoji haute résolution (≥ 1000 px)
 - Récupérer les vrais visuels : captures UserShaker V2, app triathlon, landing pages PME
 - Préciser le contexte des projets epicnpoc « Éclairage extérieur » et « Retail interactif »
 
@@ -22,3 +26,10 @@
 - Vérification : lint ✅, build ✅ (/fr et /en statiques), captures desktop + mobile sans débordement horizontal.
 - Branche : `feat/accueil` → PR vers `main`
 - Blocages : avatar en 320 px (à remplacer par une version haute résolution) ; lien Malt à renseigner.
+
+## 2026-10-14 — [Valentin] Détail des projets : modale + étude de cas
+- Fait : modale des petits projets par route interceptée (`@modal/(.)projets/[slug]`, `<dialog>` natif, URL partageable, Échap / retour ferment) ; page complète équivalente par URL directe ; étude de cas UserShaker `/[lang]/etudes/usershaker` ; statut « en construction » sur les fiches incomplètes ; lien Malt ; skills impeccable + web-animation-design versionnés ; `PRODUCT.md`.
+- Décisions + raison : contenu incomplet signalé « en construction » plutôt qu'inventé (demande de Valentin) ; clients nommables car projets publics (Valentin) ; flèches Unicode remplacées par des icônes SVG (impeccable) ; sélection, caret et scrollbar thémés.
+- Vérification : lint ✅, build ✅ (17 pages statiques), `impeccable detect` : 0 alerte, parcours modale testé (ouverture, suivant, Échap → `/fr`), captures desktop + mobile sans débordement.
+- Branche : `feat/detail-projet` → PR vers `main`
+- Blocages : aucun

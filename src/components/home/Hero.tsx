@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Content } from "@/content/types";
+import { ArrowIcon } from "@/components/ui/Icons";
 import avatar from "../../../public/images/avatar.png";
 
 type Props = { hero: Content["hero"] };
@@ -23,9 +24,10 @@ export function Hero({ hero }: Props) {
         <div className="flex flex-wrap gap-3">
           <a
             href="#contact"
-            className="bg-ink px-6 py-4 font-medium text-ground transition-transform duration-150 ease-[var(--ease-out-quint)] active:scale-[0.97] motion-reduce:transition-none"
+            className="group inline-flex items-center gap-2 bg-ink px-6 py-4 font-medium text-ground transition-transform duration-150 ease-[var(--ease-out-quint)] active:scale-[0.97] motion-reduce:transition-none"
           >
             {hero.ctaPrimary}
+            <ArrowIcon className="size-4 transition-transform duration-150 group-hover:translate-x-0.5 motion-reduce:transition-none" />
           </a>
           <a
             href="#index"

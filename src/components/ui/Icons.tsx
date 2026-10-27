@@ -17,6 +17,15 @@ export function ArrowLeftIcon({ className = "size-4" }: IconProps) {
   );
 }
 
+/** Arrow down onto a tray: download. */
+export function DownloadIcon({ className = "size-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className={className}>
+      <path d="M8 2v8M4.5 6.5L8 10l3.5-3.5M2.5 13.5h11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+    </svg>
+  );
+}
+
 export function CloseIcon({ className = "size-4" }: IconProps) {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className={className}>

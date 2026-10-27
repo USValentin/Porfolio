@@ -106,16 +106,16 @@ export const content: Content = {
       role: "UX/UI Designer",
     },
     {
-      slug: "coaching-triathlon",
+      slug: "dromo",
       number: "05",
-      title: "Triathlon coaching app",
+      title: "Endurance coach",
       client: "Personal project",
-      context: "Designed and built solo",
+      context: "Dromo · PWA",
       year: "2026",
-      kind: "sheet",
-      status: "soon",
-      summary: "A coaching app to structure my own triathlon training, from idea to code.",
-      role: "Design and development",
+      kind: "case",
+      status: "ready",
+      summary:
+        "An endurance coach designed with teams of AI agents: research, user journeys, art direction and development plan in four days.",
     },
     {
       slug: "landing-pages-pme",
@@ -148,6 +148,7 @@ export const content: Content = {
     {
       slug: "usershaker",
       kicker: "No. 01 · B2B SaaS · 2024 — today",
+      image: "usershaker-kit",
       title: "UserShaker",
       lead: "A platform to store, structure and share usage data for phygital products. I designed and built it, from the no-code V1 to the Next.js V2.",
       specs: [
@@ -184,6 +185,150 @@ export const content: Content = {
       },
       outcome: { label: "04 / What it changed" },
     },
+    {
+      slug: "dromo",
+      kicker: "No. 05 · Personal project · 2026",
+      title: "Endurance coach",
+      subtitle: "Dromo",
+      lead: "How I led the design of an endurance coach with teams of AI agents: research, user journeys, art direction, development plan.",
+      specs: [
+        { label: "Role", value: "Product Owner · Product Engineer" },
+        { label: "Period", value: "2026" },
+        { label: "Stack", value: "Next.js · React · TypeScript · Supabase · Vercel", mono: true },
+        { label: "Status", value: "In development", accent: true },
+      ],
+      image: "dromo-cover",
+      imageAlt: "The same bike session card, “Endurance et 4 accélérations”, shown in Dromo's three themes: day, evening and session",
+      figCaption: "FIG. 05.1 — One session card, three themes: day, evening, session. Sample data; the app is in French.",
+      problem: {
+        label: "01 / Context",
+        statement: "From personal use with an LLM to a real product.",
+        body: "The first prototype was my own use: I was already applying this coaching model to my training, simply by talking with an LLM. Finding no app flexible enough, I set out to turn it into a product.\nDromo prepares a triathlon or running season, adapts it every week and explains its choices. This case study is mostly about the way of working, from research to the development plan.",
+      },
+      role: {
+        label: "02 / My role",
+        statement: "The agents produce, I frame and decide.",
+        body: "I owned the product end to end: the brief, every product choice, the art direction, the reviews. Research, design and code were produced by teams of AI agents working in parallel.",
+      },
+      process: {
+        label: "03 / The process",
+        statement: "Five steps, each one signed off before moving to the next.",
+        stepPrefix: "Step",
+        steps: [
+          {
+            title: "Research",
+            body: "Teams of agents studied the competition, the market, training science, UX and technical architecture in parallel: 27 reports. An independent verification report then corrected the file, including regulated wording: performance and well-being, never diagnosis.",
+          },
+          {
+            title: "User journeys",
+            body: "The key journeys (first install, weekly plan, today's session, the unexpected, weekly review) were laid out as wireframes, then reworked through my corrections. Real examples were replaced with fictional personas.",
+            figures: [
+              {
+                caption: "FIG. 05.2 — Four journey wireframes: typical week, today, the unexpected, weekly review. Fictional persona; the app is in French.",
+                image: "dromo-wireframes",
+                alt: "Four black-and-white wireframes: the typical week with a chosen rest day, the Today screen of the persona Nadia, an unexpected event that rearranges the week, and the weekly review",
+                wide: true,
+              },
+            ],
+          },
+          {
+            title: "Art direction",
+            body: "A review of the category's apps first listed the codes to avoid: deep black and neon, orange, rings and scores, traffic lights. Three directions were explored in the territories left open; B, “Stage profile”, tells the season like a race roadbook. Four logo tracks followed, and “Season line” was chosen.",
+            figures: [
+              {
+                caption: "FIG. 05.3 — The same session in the three directions: A “Full sun”, B “Stage profile” (chosen), C “Club colours”",
+                image: "dromo-directions",
+                alt: "Three Today screens side by side: A on a light ground with beacon yellow and condensed capitals; B in map-paper green with contour lines and a session profile; C on a dark ground with coral blocks and pills",
+                wide: true,
+              },
+              {
+                caption: "FIG. 05.4 — The four logo tracks; “Season line”, top left, was chosen",
+                image: "dromo-logos",
+                alt: "The four Dromo logo tracks: Season line, Contour lines, Marker and Tulip",
+                wide: true,
+              },
+            ],
+          },
+          {
+            title: "Design system and motion",
+            body: "The chosen direction became a design system of 15 React components in three themes: day, evening and session. A motion spec sets the rule: data draws itself, one movement at a time, no bounce, no confetti.",
+            figures: [
+              {
+                caption: "FIG. 05.5 — Season profile",
+                image: "dromo-saison",
+                alt: "A 20-week season profile: weekly volume, phases, a B race, the A race and a “You are here” marker",
+              },
+              {
+                caption: "FIG. 05.6 — Session card, session theme",
+                image: "dromo-seance",
+                alt: "Indoor bike session card “Seuil 3 × 12 min” (threshold): block profile, wattage targets by zone and a “Why” line",
+              },
+              {
+                caption: "FIG. 05.7 — Rest day picker",
+                image: "dromo-repos",
+                alt: "Rest day picker: advice of at least 2 days, Wednesday and Sunday selected",
+              },
+              {
+                caption: "FIG. 05.8 — Change card, evening theme",
+                image: "dromo-changement",
+                alt: "Change card in the evening theme: threshold moved from Thursday to Saturday, with the reason and an Undo button",
+              },
+              {
+                caption: "FIG. 05.9 — The motion film (36 s): every interaction at real speed, with its step-by-step breakdown. Illustrative data; the film is in French.",
+                image: "dromo-motion-poster",
+                video: "/videos/dromo-motion.mp4",
+                alt: "Dromo motion film: logo start-up, loading, season profile, week replanning, sending to the watch and a completed session",
+                wide: true,
+              },
+            ],
+          },
+          {
+            title: "Development plan",
+            body: "A backlog of epics, stories, acceptance criteria and sprints, then a split into lanes: each agent codes against frozen data contracts, on its own branch, in its own pull request. Shared context lives in Git and is reloaded at every session.",
+          },
+        ],
+      },
+      method: {
+        label: "04 / Running the agents",
+        statement: "AI agents, run like a real product team.",
+        steps: [
+          {
+            title: "Decisions through questionnaires",
+            body: "Every product choice goes through a short questionnaire. Each answer is logged and dated in a decision journal, with its “why”.",
+          },
+          {
+            title: "Iterations driven by my corrections",
+            body: "Every deliverable is reviewed. My corrections become rules the agents then apply, such as fictional personas instead of real examples.",
+          },
+          {
+            title: "Measurable safeguards",
+            body: "Locked reference plans, hundreds of profiles tested every night, errors planted on purpose to prove each test catches them.",
+          },
+          {
+            title: "One person merges",
+            body: "An independent agent reviews major pull requests. I review and merge everything myself.",
+          },
+        ],
+      },
+      outcome: {
+        label: "05 / In numbers",
+        statement: "Four days, from a blank page to the first sprint.",
+        figures: [
+          { value: "3", label: "Art directions explored" },
+          { value: "27", label: "Research reports" },
+          { value: "8 d", label: "Of planned work, done in 2 days" },
+          { value: "≈ 780", label: "Automated tests" },
+        ],
+        note: "Figures as of 27 October 2026. Dromo hasn't launched yet: the visuals are design system excerpts with sample data.",
+      },
+      cta: {
+        label: "06 / Beta",
+        title: "Want to become a beta tester?",
+        body: "Training for a triathlon or a running race? Write to me to be among the first to try the app.",
+        action: "Become a beta tester",
+        subject: "Beta test — endurance coach",
+      },
+    },
   ],
   caseNav: { backToIndex: "Project index", nextProject: "Next project", caseLabel: "Case study" },
   about: {
@@ -194,6 +339,7 @@ export const content: Content = {
     tools: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "Generative AI", "Figma", "Bubble.io"],
     offScreenLabel: "Off screen",
     offScreen: "Triathlon, sailing, cinema.",
+    cv: { label: "Download my CV (PDF)", href: "/cv-valentin-hassenforder-en.pdf" },
     revisions: {
       label: "05 / Revision history",
       columns: { rev: "Rev.", period: "Period", role: "Position", org: "Organisation" },

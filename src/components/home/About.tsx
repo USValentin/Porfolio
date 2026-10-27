@@ -1,4 +1,5 @@
 import type { Content } from "@/content/types";
+import { DownloadIcon } from "@/components/ui/Icons";
 
 type Props = { about: Content["about"] };
 
@@ -41,6 +42,14 @@ export function About({ about }: Props) {
           <span className="font-mono text-[11px] whitespace-nowrap text-muted uppercase">{about.offScreenLabel}</span>
           <span>{about.offScreen}</span>
         </p>
+        <a
+          href={about.cv.href}
+          download
+          className="inline-flex w-fit items-center gap-2 border border-ink px-5 py-3 font-medium transition-[transform,background-color,color] duration-150 ease-[var(--ease-out-quint)] active:scale-[0.97] motion-reduce:transition-none [@media(hover:hover)_and_(pointer:fine)]:hover:bg-ink [@media(hover:hover)_and_(pointer:fine)]:hover:text-ground"
+        >
+          <DownloadIcon />
+          {about.cv.label}
+        </a>
       </div>
 
       <div className="flex min-w-0 flex-[999_1_600px] flex-col gap-12">

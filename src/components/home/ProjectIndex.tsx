@@ -63,7 +63,7 @@ export function ProjectIndex({ content, lang }: Props) {
             <li key={project.slug} className={`border-b ${i === rows.length - 1 ? "border-ink" : "border-rule"}`}>
               <Link
                 href={projectHref(lang, project)}
-                scroll={false}
+                scroll={project.kind === "case"}
                 className={`group flex flex-col gap-1.5 py-4 transition-colors duration-150 ease-out motion-reduce:transition-none [@media(hover:hover)_and_(pointer:fine)]:hover:bg-hover ${grid}`}
               >
                 <span className="font-mono text-sm text-muted tabular-nums">{project.number}</span>

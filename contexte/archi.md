@@ -16,6 +16,11 @@
 - Les projets (`content.projects`) ont un `slug` stable, identique dans les deux langues, un `kind`
   (`case` | `sheet`) et un `status` (`ready` | `soon`). `soon` affiche le bloc « en construction »
   (`ConstructionNotice`) au lieu d'inventer du contenu.
+- Études de cas (`content.caseStudies`) : un seul gabarit, sections optionnelles (`subtitle`, `role`,
+  `delivered`, `process`, `migration`, `method`, `outcome.figures`, `cta`) affichées seulement si présentes.
+- Visuels des études de cas : une clé `CaseVisual` par image, importée une fois dans `src/lib/case-visuals.ts`
+  (dimensions et flou automatiques). Figure sans `image` = cadre « en construction » ; `wide` = deux colonnes
+  aux proportions de l'image ; `video` = fichier sous `public/videos/`, `image` servant d'affiche.
 - `src/lib/projects.ts` : `projectHref`, `findProject`, `adjacentSheets`.
 
 ## Composants

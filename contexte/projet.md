@@ -23,4 +23,4 @@ Une prise de contact (email, LinkedIn, Malt). Chaque section sert ce but.
 ## Structure retenue
 - Accueil « fiche technique » : désignation, caractéristiques, index des projets, formats courts, contact.
 - Détail projet en **deux formats** : modale pour les petits projets, page complète (étude de
-  cas) pour les 2-3 projets phares (UserShaker, app de coaching triathlon).
+  cas) pour les 2-3 projets phares (UserShaker, Dromo — ex « app de coaching triathlon »).

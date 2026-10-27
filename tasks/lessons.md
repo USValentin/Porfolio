@@ -7,3 +7,4 @@ Une règle par correction de Valentin, pour ne pas refaire la même erreur.
 - Un contenu incomplet s'affiche « en construction », jamais comblé par un placeholder visible ni inventé.
 - Clients anonymes (« constructeur / équipementier automobile ») tant que Valentin ne valide pas leur nom projet par projet.
 - Une précision donnée sur un projet ne s'applique qu'à ce projet : ne pas la reporter sur les textes plus généraux (bio, parcours) sans demander.
+- Projet pas encore sur le marché : l'étude de cas raconte la méthode (recherche, parcours, DA, plan de dev), reste discrète sur les fonctionnalités et ne garde que quelques chiffres.

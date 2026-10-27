@@ -30,7 +30,7 @@ Valentin travaille principalement sur UserShaker : le site met en avant les miss
 
 ## Evidence on Hand
 - UserShaker : rendu 3D du kit (`public/images/usershaker-kit.jpg`) ; incubé à EuraTechnologies ; lauréat Techinnov.
-- Absences à ne pas combler par de l'invention : captures de l'app UserShaker V2, résultats chiffrés, témoignages clients, captures de l'app de coaching triathlon et des landing pages PME. Les fiches incomplètes s'affichent « en construction ».
+- Absences à ne pas combler par de l'invention : captures de l'app UserShaker V2, résultats chiffrés, témoignages clients, captures des landing pages PME. Les fiches incomplètes s'affichent « en construction ».
 
 ## Product Principles
 1. Chaque section rapproche le visiteur d'une prise de contact.

@@ -30,6 +30,8 @@ Une seule couleur d'accent (vert sapin). Pas de dégradé, pas d'ombre décorati
 - Uniquement `transform` et `opacity`. Survol : `150ms ease`. Clic bouton : `scale(0.97)` en 140 ms.
 - Survol seulement sur `(hover: hover) and (pointer: fine)`.
 - `prefers-reduced-motion: reduce` → aucune transition.
+- Vidéo : jamais en lecture automatique. `<video controls preload="none">` avec une affiche : rien ne bouge
+  ni ne se télécharge avant le clic du visiteur.
 
 ## Statut « en construction »
 - Tout projet `status: "soon"` porte un badge `En construction` (point vert qui pulse, figé en

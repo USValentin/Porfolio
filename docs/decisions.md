@@ -4,14 +4,16 @@
 
 - ✅ Repo branché sur Vercel (https://valentinhassenforder.vercel.app) — reste le domaine `valentinhassenforder.fr`
 - ✅ PR `feat/accueil` mergée (PR #1)
-- Merger la PR `feat/detail-projet` après test de la modale et de la section Parcours (desktop + mobile) sur la preview Vercel
-- Préciser l'année de début du freelance (ligne Rév. 06 du parcours, affichée « Auj. »)
+- ✅ PR `feat/detail-projet` mergée (PR #2)
+- Préciser l'année de début du freelance (ligne Rév. 06 du parcours, affichée « Auj. ») — le CV indique « nov. 2025 », à reporter si Valentin valide
 - Clients anonymes pendant la création des fiches ; décider plus tard si on les nomme (projets publics) — UserShaker : clients nommés (Renault, Mercedes, Rubika), décidé le 14/10/2026
-- Rédiger les fiches « en construction » : cockpit, éclairage, démonstrateur auto, triathlon (+ étude de cas complète), landing pages PME
+- Étude de cas Dromo : PR `feat/etude-dromo` ouverte — tester sur la preview Vercel, puis merger
+- Dromo : nom et marque pas encore déposés (INPI) — page discrète, « Dromo » seulement en sous-titre (Valentin)
+- Rédiger les fiches « en construction » : cockpit, éclairage, démonstrateur auto, landing pages PME
 - Résultat de l'étude de cas UserShaker (section 04) + captures de l'app V2
 - Memoji haute résolution (≥ 1000 px)
 - Section Parcours : fournir le CV en PDF pour ajouter le bouton « Télécharger le CV » de la maquette
-- Récupérer les vrais visuels : captures UserShaker V2, app triathlon, landing pages PME
+- Récupérer les vrais visuels : captures UserShaker V2, landing pages PME
 - Préciser le contexte du projet epicnpoc « Éclairage extérieur » (« Démonstrateur auto » = simulateur de conduite epicnpoc pour le CES 2024, logiciel BOWL)
 
 ---
@@ -42,3 +44,17 @@
 - Vérification : lint ✅, build ✅ ; captures non faites (serveur local non accessible) → à regarder sur la preview Vercel.
 - Branche : `feat/detail-projet` → PR vers `main`
 - Blocages : année de début du freelance à préciser ; CV PDF à fournir.
+
+## 2026-10-27 — [Valentin] Étude de cas Dromo
+- Fait : Dromo remplace « App de coaching triathlon » (N° 05, slug `dromo`, `kind: "case"`, `status: "ready"`) ; étude de cas `/[lang]/etudes/dromo` en FR/EN centrée sur la méthode : contexte, rôle, démarche en 5 étapes (recherche, parcours utilisateurs, DA, design system et motion, plan de développement) avec figures, pilotage des agents, 4 chiffres au 27/10/2026 ; gabarit d'étude de cas généralisé (sections `role`, `process`, `method`, résultats chiffrés optionnels, `delivered` et `migration` optionnels, visuels via `src/lib/case-visuals.ts`, cadre `VisualFrame` partagé) ; lignes « étude de cas » de l'index sans `scroll={false}` (sinon la page s'ouvre au milieu).
+- Décisions + raison : Dromo pas encore sur le marché → page discrète sur le produit, centrée sur la façon de travailler, peu de chiffres (Valentin) ; nom « Dromo » gardé (Valentin) ; planche des 4 pistes de logo rendue depuis les SVG du dépôt ; 4 wireframes (semaine type, aujourd'hui, imprévu, bilan — persona Nadia) rendus depuis le dépôt, les écrans « Parcours » et « Plan semaine » écartés car ils citent des courses réelles (IRONMAN 70.3 Les Sables-d'Olonne, Ironman) ; les 3 directions de DA rendues depuis l'artifact « DA — directions explorées » (écrans « Aujourd'hui » A, B, C) ; figures larges (`wide`) sur deux colonnes à leurs proportions ; film de motion en cadre « en construction » (une vidéo ne sort que par Export sur la page du film) ; dépôt Dromo privé → seulement des captures du design system recadrées (`public/images/dromo/`, tirées de `packages/ui/demo/captures/` sur `origin/main`), données d'exemple, aucune course réelle ni nom réel ; chiffres et méthode repris tels quels de `claude/dromo-sources-portfolio.md` (Dromo), rien d'inventé ; page UserShaker inchangée.
+- Vérification : lint ✅, build ✅ (17 pages statiques, dont `/fr/etudes/dromo` et `/en/etudes/dromo`), `impeccable detect` : 0 alerte ; captures Playwright desktop 1440 + mobile 390 (FR, EN, et UserShaker pour la non-régression), 0 px de débordement horizontal.
+- Retouches de Valentin : fiche réduite à Rôle « Product Owner · Product Engineer », Période « 2026 » (surtitre aligné), Stack, Statut « En développement » (ligne Équipe retirée) ; contexte : le premier prototype était l'usage perso de Valentin (ce modèle de coaching appliqué via un LLM), productisé faute d'app assez flexible.
+- Film de motion : export MP4 fourni par Valentin (1280 × 720, 36,5 s, 3,7 Mo, avec bande-son) copié dans `public/videos/dromo-motion.mp4` ; FIG. 05.9 en `<video controls preload="none">`, sans lecture automatique (rien ne bouge sans action du visiteur, pause toujours possible, rien n'est téléchargé avant le clic), affiche = dernière image du film (`public/images/dromo/motion-poster.jpg`) ; contenu vérifié image par image (persona fictive, montre générique, « données illustratives ») ; lecture testée dans Chrome.
+- Planche des logos recomposée en format large (2400 × 720, 2 × 2) et passée en figure `wide` : même largeur que les planches du dessus, sans vide à droite (Valentin).
+- Titre : « Coach d'endurance » / « Endurance coach » (index, page, onglet), « Dromo » en sous-titre (nouveau champ `subtitle` des études de cas) et dans le contexte de l'index (« Dromo · PWA ») — « Dromo » seul ne parle pas et le projet reste discret (Valentin) ; slug `dromo`, visuels et mentions dans le texte inchangés.
+- Chiffres : « 17 pull requests fusionnées » (peu parlant hors dev, Valentin) remplacé par « 8 j de travail prévu, fait en 2 jours » (source : 8 jours de stories faits en 2 jours calendaires) ; « 4 j du brief au sprint 0 » (déjà dit par le titre de la section) remplacé par « 3 directions artistiques explorées ».
+- Section « 06 / Bêta » en fin d'étude (nouveau champ `cta` des études de cas) : « Envie de devenir bêta-testeur ? » + bouton mailto avec l'objet « Bêta-test — coach d'endurance » (Valentin). Chiffres alignés en haut de leur case (`justify-end` sur la colonne inversée) : sur mobile, un libellé sur deux lignes décalait la valeur.
+- Branche : `feat/etude-dromo` → PR vers `main`
+- Blocages : nom Dromo non déposé à l'INPI (page discrète, nom en sous-titre seulement).
+

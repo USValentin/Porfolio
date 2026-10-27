@@ -9,3 +9,7 @@
   arrière ne ferme plus la modale.
 - **`next/font/google` télécharge les polices au build.** Sans accès à fonts.googleapis.com, le build
   casse. On auto-héberge avec `next/font/local` (fichiers dans `src/app/fonts/`).
+- **Capture pleine page = images floues.** `next/image` charge en différé : une capture Playwright prise sans
+  défiler montre les placeholders. Faire défiler toute la page avant de capturer.
+- **Capturer un site du dépôt Dromo ou d'un artifact : vérifier chaque écran.** Les wireframes « Parcours »
+  et « Plan semaine » citent des courses réelles ; seuls les personas fictifs vont dans le repo public.

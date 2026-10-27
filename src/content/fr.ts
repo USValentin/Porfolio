@@ -107,16 +107,16 @@ export const content: Content = {
       role: "UX/UI Designer",
     },
     {
-      slug: "coaching-triathlon",
+      slug: "dromo",
       number: "05",
-      title: "App de coaching triathlon",
+      title: "Coach d'endurance",
       client: "Projet personnel",
-      context: "Conçue et codée seul",
+      context: "Dromo · PWA",
       year: "2026",
-      kind: "sheet",
-      status: "soon",
-      summary: "Une app de coaching pour structurer mon propre entraînement de triathlon, de l'idée au code.",
-      role: "Design et développement",
+      kind: "case",
+      status: "ready",
+      summary:
+        "Un coach d'endurance conçu avec des équipes d'agents IA : recherche, parcours utilisateurs, direction artistique et plan de développement en quatre jours.",
     },
     {
       slug: "landing-pages-pme",
@@ -149,6 +149,7 @@ export const content: Content = {
     {
       slug: "usershaker",
       kicker: "N° 01 · SaaS B2B · 2024 — aujourd'hui",
+      image: "usershaker-kit",
       title: "UserShaker",
       lead: "Une plateforme pour stocker, structurer et partager les données d'usage de produits phygitaux. Je l'ai conçue et codée, de la V1 no-code à la V2 en Next.js.",
       specs: [
@@ -184,6 +185,150 @@ export const content: Content = {
         },
       },
       outcome: { label: "04 / Ce que ça a changé" },
+    },
+    {
+      slug: "dromo",
+      kicker: "N° 05 · Projet personnel · 2026",
+      title: "Coach d'endurance",
+      subtitle: "Dromo",
+      lead: "Comment j'ai mené la conception d'un coach d'endurance avec des équipes d'agents IA : recherche, parcours utilisateurs, direction artistique, plan de développement.",
+      specs: [
+        { label: "Rôle", value: "Product Owner · Product Engineer" },
+        { label: "Période", value: "2026" },
+        { label: "Stack", value: "Next.js · React · TypeScript · Supabase · Vercel", mono: true },
+        { label: "Statut", value: "En développement", accent: true },
+      ],
+      image: "dromo-cover",
+      imageAlt: "La même carte de séance vélo, « Endurance et 4 accélérations », affichée dans les trois thèmes de Dromo : jour, soir et séance",
+      figCaption: "FIG. 05.1 — Une carte de séance, trois thèmes : jour, soir, séance. Données d'exemple.",
+      problem: {
+        label: "01 / Le contexte",
+        statement: "D'un usage perso avec un LLM à un vrai produit.",
+        body: "Le premier prototype, c'était mon propre usage : j'appliquais déjà ce modèle de coaching à mon entraînement, simplement en échangeant avec un LLM. Ne trouvant aucune app assez flexible, j'ai voulu en faire un produit.\nDromo prépare une saison de triathlon ou de course à pied, l'adapte chaque semaine et explique ses choix. Cette étude montre surtout la façon de travailler, de la recherche au plan de développement.",
+      },
+      role: {
+        label: "02 / Mon rôle",
+        statement: "Les agents produisent, je cadre et je tranche.",
+        body: "J'ai porté le produit de bout en bout : le brief, chaque choix produit, la direction artistique, la relecture. La recherche, le design et le code ont été produits par des équipes d'agents IA qui travaillaient en parallèle.",
+      },
+      process: {
+        label: "03 / La démarche",
+        statement: "Cinq étapes, chacune validée avant de passer à la suivante.",
+        stepPrefix: "Étape",
+        steps: [
+          {
+            title: "Recherche",
+            body: "Des équipes d'agents ont étudié en parallèle la concurrence, le marché, la science de l'entraînement, l'UX et l'architecture technique : 27 rapports. Un rapport de vérification indépendant a ensuite corrigé le dossier, notamment le vocabulaire réglementé : performance et bien-être, jamais de diagnostic.",
+          },
+          {
+            title: "Parcours utilisateurs",
+            body: "Les parcours clés (première installation, plan de la semaine, séance du jour, imprévu, bilan) ont été posés en wireframes, puis retravaillés au fil de mes corrections. Les exemples réels ont été remplacés par des personas fictifs.",
+            figures: [
+              {
+                caption: "FIG. 05.2 — Quatre wireframes du parcours : semaine type, aujourd'hui, imprévu, bilan. Persona fictive.",
+                image: "dromo-wireframes",
+                alt: "Quatre wireframes en noir et blanc : la semaine type avec un jour de repos choisi, l'écran Aujourd'hui de la persona Nadia, un imprévu qui réorganise la semaine, et le bilan de la semaine",
+                wide: true,
+              },
+            ],
+          },
+          {
+            title: "Direction artistique",
+            body: "Une veille des apps du secteur a d'abord listé les codes à éviter : noir profond et néon, orange, anneaux et scores, feux tricolores. Trois directions ont été explorées sur les territoires restés libres ; la B, « Profil d'étape », raconte la saison comme le roadbook d'une course. Quatre pistes de logo ont suivi, et « Ligne de saison » a été retenue.",
+            figures: [
+              {
+                caption: "FIG. 05.3 — La même séance dans les trois directions : A « Plein Soleil », B « Profil d'étape » (retenue), C « Couleurs de club »",
+                image: "dromo-directions",
+                alt: "Trois écrans Aujourd'hui côte à côte : A en fond clair, jaune balise et capitales condensées ; B en vert papier carte avec courbes de niveau et profil de séance ; C en fond sombre avec aplats corail et pilules",
+                wide: true,
+              },
+              {
+                caption: "FIG. 05.4 — Les quatre pistes de logo ; « Ligne de saison », en haut à gauche, est retenue",
+                image: "dromo-logos",
+                alt: "Les quatre pistes de logo Dromo : Ligne de saison, Isolignes, Borne et Tulipe",
+                wide: true,
+              },
+            ],
+          },
+          {
+            title: "Design system et motion",
+            body: "La direction retenue est devenue un design system de 15 composants en React, dans trois thèmes : jour, soir et séance. Une spécification du mouvement fixe la règle : la donnée se dessine, un seul mouvement à la fois, sans rebond ni confettis.",
+            figures: [
+              {
+                caption: "FIG. 05.5 — Profil de saison",
+                image: "dromo-saison",
+                alt: "Profil d'une saison de 20 semaines : volume hebdomadaire, phases, une course B, la course A et un repère « Tu es ici »",
+              },
+              {
+                caption: "FIG. 05.6 — Carte de séance, thème séance",
+                image: "dromo-seance",
+                alt: "Carte de séance home-trainer « Seuil 3 × 12 min » : profil des blocs, cibles en watts par zone et ligne « Pourquoi »",
+              },
+              {
+                caption: "FIG. 05.7 — Choix des jours de repos",
+                image: "dromo-repos",
+                alt: "Sélecteur des jours de repos : conseil d'au moins 2 jours, mercredi et dimanche choisis",
+              },
+              {
+                caption: "FIG. 05.8 — Carte de changement, thème soir",
+                image: "dromo-changement",
+                alt: "Carte de changement en thème soir : le seuil passe de jeudi à samedi, avec la raison et un bouton Annuler",
+              },
+              {
+                caption: "FIG. 05.9 — Le film de motion (36 s) : chaque interaction à vitesse réelle, avec son relevé d'étapes. Données illustratives.",
+                image: "dromo-motion-poster",
+                video: "/videos/dromo-motion.mp4",
+                alt: "Film de motion de Dromo : démarrage du logo, chargement, profil de saison, replanification de la semaine, envoi sur la montre et séance validée",
+                wide: true,
+              },
+            ],
+          },
+          {
+            title: "Plan de développement",
+            body: "Un backlog en épics, stories, critères d'acceptation et sprints, puis un découpage en couloirs : chaque agent code contre des contrats de données figés, sur sa propre branche, dans sa propre pull request. Le contexte partagé vit dans Git et se recharge à chaque session.",
+          },
+        ],
+      },
+      method: {
+        label: "04 / Piloter les agents",
+        statement: "Des agents IA, encadrés comme une vraie équipe produit.",
+        steps: [
+          {
+            title: "Des décisions par questionnaires",
+            body: "Chaque choix produit passe par un questionnaire court. Chaque réponse est consignée et datée dans un journal de décisions, avec son « pourquoi ».",
+          },
+          {
+            title: "Des itérations guidées par mes corrections",
+            body: "Chaque livrable est relu. Mes corrections deviennent des règles que les agents appliquent ensuite, comme les personas fictifs à la place des exemples réels.",
+          },
+          {
+            title: "Des garde-fous mesurables",
+            body: "Plans de référence verrouillés, centaines de profils testés chaque nuit, erreurs introduites exprès pour prouver que chaque test les attrape.",
+          },
+          {
+            title: "Une seule personne fusionne",
+            body: "Un agent indépendant relit les pull requests importantes. Je relis et je fusionne seul.",
+          },
+        ],
+      },
+      outcome: {
+        label: "05 / En chiffres",
+        statement: "Quatre jours, de la feuille blanche au premier sprint.",
+        figures: [
+          { value: "3", label: "Directions artistiques explorées" },
+          { value: "27", label: "Rapports de recherche" },
+          { value: "8 j", label: "De travail prévu, fait en 2 jours" },
+          { value: "≈ 780", label: "Tests automatisés" },
+        ],
+        note: "Chiffres au 27 octobre 2026. Dromo n'est pas encore lancé : les visuels sont des extraits du design system, avec des données d'exemple.",
+      },
+      cta: {
+        label: "06 / Bêta",
+        title: "Envie de devenir bêta-testeur ?",
+        body: "Vous préparez un triathlon ou une course à pied ? Écrivez-moi pour faire partie des premiers à tester l'app.",
+        action: "Devenir bêta-testeur",
+        subject: "Bêta-test — coach d'endurance",
+      },
     },
   ],
   caseNav: { backToIndex: "Index des projets", nextProject: "Projet suivant", caseLabel: "Étude de cas" },

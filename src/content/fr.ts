@@ -340,6 +340,7 @@ export const content: Content = {
     tools: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "IA générative", "Figma", "Bubble.io"],
     offScreenLabel: "Hors écran",
     offScreen: "Triathlon, nautisme, cinéma.",
+    cv: { label: "Télécharger le CV (PDF)", href: "/cv-valentin-hassenforder.pdf" },
     revisions: {
       label: "05 / Historique des révisions",
       columns: { rev: "Rév.", period: "Période", role: "Poste", org: "Organisation" },

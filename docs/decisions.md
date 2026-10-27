@@ -7,12 +7,12 @@
 - ✅ PR `feat/detail-projet` mergée (PR #2)
 - Préciser l'année de début du freelance (ligne Rév. 06 du parcours, affichée « Auj. ») — le CV indique « nov. 2025 », à reporter si Valentin valide
 - Clients anonymes pendant la création des fiches ; décider plus tard si on les nomme (projets publics) — UserShaker : clients nommés (Renault, Mercedes, Rubika), décidé le 14/10/2026
-- Étude de cas Dromo : PR `feat/etude-dromo` ouverte — tester sur la preview Vercel, puis merger
+- Étude de cas Dromo + CV : PR `feat/etude-dromo` ouverte — tester sur la preview Vercel, puis merger
 - Dromo : nom et marque pas encore déposés (INPI) — page discrète, « Dromo » seulement en sous-titre (Valentin)
 - Rédiger les fiches « en construction » : cockpit, éclairage, démonstrateur auto, landing pages PME
 - Résultat de l'étude de cas UserShaker (section 04) + captures de l'app V2
 - Memoji haute résolution (≥ 1000 px)
-- Section Parcours : fournir le CV en PDF pour ajouter le bouton « Télécharger le CV » de la maquette
+- ✅ CV téléchargeable FR/EN — numéro de portable publié, validé par Valentin le 27/10/2026
 - Récupérer les vrais visuels : captures UserShaker V2, landing pages PME
 - Préciser le contexte du projet epicnpoc « Éclairage extérieur » (« Démonstrateur auto » = simulateur de conduite epicnpoc pour le CES 2024, logiciel BOWL)
 
@@ -58,3 +58,9 @@
 - Branche : `feat/etude-dromo` → PR vers `main`
 - Blocages : nom Dromo non déposé à l'INPI (page discrète, nom en sous-titre seulement).
 
+## 2026-10-27 — [Valentin] CV téléchargeable
+- Fait : bouton secondaire « Télécharger le CV (PDF) » / « Download my CV (PDF) » en bas de la colonne gauche de « 04 / À propos », comme prévu par la maquette ; chaque langue sert son CV (`public/cv-valentin-hassenforder.pdf` et `public/cv-valentin-hassenforder-en.pdf`, copiés depuis `Portfolio/CV/…_10-2026*.pdf`) ; icône SVG `DownloadIcon` ; clé `about.cv` dans le contenu.
+- Décisions + raison : attribut `download` pour un téléchargement direct ; survol seulement sur pointeur fin, `scale(0.97)` au clic (design.md) ; le proxy ignore déjà les fichiers à extension, pas de redirection des PDF.
+- Vérification : lint ✅, build ✅, `impeccable detect` : 0 alerte ; Playwright : bouton FR et EN en desktop + mobile, PDF servis en 200 `application/pdf`, téléchargement déclenché.
+- Branche : `feat/etude-dromo` → PR vers `main` (commit séparé de l'étude de cas Dromo)
+- Blocages : aucun — les PDF contiennent le numéro de portable, publication validée par Valentin.

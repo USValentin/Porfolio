@@ -131,6 +131,8 @@ export type Content = {
     tools: string[];
     offScreenLabel: string;
     offScreen: string;
+    /** CV in the page's language, a PDF under `public/`. */
+    cv: { label: string; href: string };
     /** Career, newest first, presented as a datasheet revision history. */
     revisions: {
       label: string;
